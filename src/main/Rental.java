@@ -14,13 +14,11 @@ public class Rental {
         return movie;
     }
 
-    int getFrequentRenterPoints() {
-        if ((getMovie().getPriceCode() == Movie.NEW_RELEASE) && getDaysRented() > 1)
-            return 2;
-        return 1;
-    }
-
     double getCharge() {
         return movie.getCharge(daysRented);
+    }
+
+    int getFrequentRenterPoints() {
+        return movie.getFrequentRenterPoints(daysRented);
     }
 }
