@@ -8,7 +8,7 @@ public class Movie {
     private int priceCode;
     public Movie(String newtitle, int newpriceCode) {
         title = newtitle;
-        priceCode = newpriceCode;
+        setPriceCode(newpriceCode);
     }
     public int getPriceCode() {
         return priceCode;
